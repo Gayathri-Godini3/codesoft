@@ -1,0 +1,138 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh; /* Ensure the header takes at least the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 50px; /* Adjust the margin as needed */
+}
+.title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.button{
+    text-align: center;
+     
+   }
+.btn{
+    border:1px solid #fff;
+    padding: 10px 30px;
+    color:#fff;
+    text-decoration: none;
+    transition:0.6s ease;
+    display: block;
+    margin: 50px 0;
+}
+.btn:hover{
+    background-color: #fff;
+    color:#000;
+  
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .menu-toggle:checked + .nav-toggle + .nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(109, 106, 131, 0.9);
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .menu-toggle:checked + .nav-toggle + .nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle:checked + .nav-toggle + .nav a {
+        font-size: 18px;
+        font-weight: normal;
+        color: #fff;
+    }
+
+    .menu-toggle:checked + .nav-toggle + .nav-toggle {
+        display: block;
+        margin-top: 20px;
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
